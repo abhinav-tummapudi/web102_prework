@@ -19,8 +19,16 @@ body {
     margin-top: -10px;
 }
 
+/* Challenge-2 Step-3 */
 .stats-container {
     display: flex;
+    align-items: center;
+}
+
+/* Challenge-2 Step-3 */
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
