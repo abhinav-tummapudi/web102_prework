@@ -81,3 +81,9 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+/* Extra Feature */
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
