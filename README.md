@@ -19,6 +19,8 @@ The following **optional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
 
+- Added a visual feature to the filter buttons. On hover, the cursor will be changed to the pointer and a box shadow will appear for easy navigation.
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
