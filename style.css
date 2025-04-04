@@ -4,7 +4,7 @@ body {
     font-family: 'Cabin', sans-serif;
     background: linear-gradient(to bottom right, #3591ed, #f93232);
     color: #2d3142;
-    margin: 0;
+    margin: 1;
     padding: 0;
 }
 
@@ -230,6 +230,9 @@ body.dark-mode {
     background-color: #224b4f;
 }
 
+h2, p{
+    text-align: center;
+}
 
 html {
     scroll-behavior: smooth;

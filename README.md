@@ -19,7 +19,39 @@ The following **optional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
 
-- Added a visual feature to the filter buttons. On hover, the cursor will be changed to the pointer and a box shadow will appear for easy navigation.
+### 🔍 1. Game Search Bar
+- A search input allows users to filter games by name as they type.
+- Instant results update without needing to press Enter.
+- Case-insensitive matching using JavaScript `.filter()` and `.includes()`.
+
+### 🎯 2. Navigation Scroll to “Our Games” Section
+- A navigation link at the top smoothly scrolls to the “Our Games” section.
+- Enables quick access for users looking to explore game listings.
+
+### 🌙 3. Dark Mode Toggle
+- A Night Mode button toggles between light and dark themes.
+- Uses `classList.toggle()` to apply a `.dark-mode` class on `<body>`.
+- Saves user preference in `localStorage` and restores it on page reload.
+
+### ⬆️ 4. Back to Top Button
+- A floating button appears when the user scrolls down the page.
+- Clicking the button scrolls the page smoothly back to the top.
+
+### 📊 5. Funding Progress Bars
+- Each game card displays a `<progress>` bar showing how much funding it has reached.
+- Uses `value` and `max` attributes to represent `pledged` vs `goal`.
+
+### 🌈 6. Polished Pastel Theme (Visual Overhaul)
+- Redesigned with a clean, modern pastel color palette.
+- Includes:
+  - Gradient backgrounds
+  - Rounded cards and buttons
+  - Soft hover shadows
+  - Card popup on hover
+  - Button onhover effect
+- Designed for a calm and creative aesthetic, perfect for a game-focused platform.
+
+---
 
 ## Video Walkthrough
 
