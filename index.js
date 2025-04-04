@@ -233,3 +233,26 @@ window.addEventListener("scroll", () => {
 backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// 3. Night Mode
+
+const toggleBtn = document.getElementById("toggle-dark-mode");
+
+// Load user preference if it exists
+if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️ Light Mode";
+}
+
+// Toggle dark mode on click
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        toggleBtn.textContent = "☀️ Light Mode";
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+        toggleBtn.textContent = "🌙 Night Mode";
+    }
+});
