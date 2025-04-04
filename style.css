@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(to bottom right, #6b8fb4, #93a5cf);
+    color: #1c1c1c;
+    margin: 0;
+    padding: 0;
 }
+
 
 #tentacles {
     width: 50px;
@@ -12,11 +16,15 @@ body {
 .header {
     display: flex;
     background-color: lightblue;
-    padding: 1%;
+    padding: 1rem 2rem;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    color: white;
+}
+
+.header-text {
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 /* Challenge-2 Step-3 */
@@ -75,15 +83,99 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: 'Cabin', sans-serif;
     border: none;
-    padding: 1%;
-    margin: 1%;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem;
     border-radius: 7px;
+    background-color: #3c6e71;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-/* Extra Feature */
-button:hover{
+button:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    background-color: #224b4f;
 }
+
+/* ADDITIONAL FEATURES */
+
+/* Search Bar */
+
+#search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+}
+
+/* Nav Bar */
+
+.navbar {
+    background-color: #284b63;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d1f2ff;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #3c6e71;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #224b4f;
+}
+
+progress {
+    width: 100%;
+    height: 16px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #3c6e71;
+    border-radius: 5px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
