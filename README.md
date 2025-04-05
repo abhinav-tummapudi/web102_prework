@@ -70,6 +70,14 @@ GIF created with ...
 
 Describe any challenges encountered while building the app.
 
+- Preventing dark mode styles from conflicting with pastel design.
+- Styling elements like inputs and progress bars consistently across themes.
+- Aligning logo, text, and nav buttons cleanly in a flexible header layout.
+- Making hover effects feel responsive but not aggressive.
+- The hardest part
+  - Picking pastel colors that balance warmth and contrast.
+- Using local storage to store the light or dark mode.
+  - Remembering dark mode preference after reload and across sessions.
 ## License
 
     Copyright [yyyy] [name of copyright owner]
