@@ -51,6 +51,7 @@ function addGamesToPage(games) {
             <p><strong>Backers:</strong> ${game.backers.toLocaleString()}</p>
             <p><strong>Pledged:</strong> $${game.pledged.toLocaleString()}</p>
             <p><strong>Goal:</strong> $${game.goal.toLocaleString()}</p>
+            <progress value="${game.pledged}" max="${game.goal}"></progress>
         `;
 
     // append the game to the games-container
@@ -185,7 +186,73 @@ const sortedGames = GAMES_JSON.sort((item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame, ...otherGames] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const topFundedGame = document.createElement("p");
+topFundedGame.textContent = firstGame.name;
+firstGameContainer.appendChild(topFundedGame);
 
 // do the same for the runner up item
+const secondMostFundedGame = document.createElement("p");
+secondMostFundedGame.textContent = secondGame.name;
+secondGameContainer.appendChild(secondMostFundedGame);
+
+
+// Additional Features
+
+// 1. Search Bar
+
+const searchBar = document.getElementById("search-bar");
+
+searchBar.addEventListener("input", function (e) {
+    const query = e.target.value.toLowerCase();
+
+    const filteredGames = GAMES_JSON.filter(game =>
+        game.name.toLowerCase().includes(query)
+    );
+
+    deleteChildElements(gamesContainer);
+    addGamesToPage(filteredGames);
+});
+
+// 2. Back to top button
+
+const backToTopBtn = document.getElementById("back-to-top");
+
+// Show the button when scrolled down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+});
+
+// Scroll to top smoothly
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 3. Night Mode
+
+const toggleBtn = document.getElementById("toggle-dark-mode");
+
+// Load user preference if it exists
+if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️ Light Mode";
+}
+
+// Toggle dark mode on click
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        toggleBtn.textContent = "☀️ Light Mode";
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+        toggleBtn.textContent = "🌙 Night Mode";
+    }
+});
