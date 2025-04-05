@@ -51,6 +51,8 @@ The following **optional** features are implemented:
   - Button onhover effect
 - Designed for a calm and creative aesthetic, perfect for a game-focused platform.
 
+### 🧑‍💻 7. Further Development
+- I would continue to work and enchance the website. The prework challenge is very interesting. I sincerely hope I would my prework will be qualified and start taking the summer Web102 Course. This will help me out to gain hands-on knowledge on Web Development and get an intern.
 ---
 
 ## Video Walkthrough
